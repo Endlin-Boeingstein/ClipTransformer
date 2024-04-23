@@ -16,8 +16,12 @@ class LibraryReader
         {
             //创建路径文件夹实例
             DirectoryInfo TheFolder = new DirectoryInfo(Fpath);
+            //创建文件数组
+            FileInfo[] files = TheFolder.GetFiles();
+            //为文件数组排序
+            Array.Sort(files, new FileNameSort());
             //遍历文件夹内文件
-            foreach (FileInfo NextFile in TheFolder.GetFiles())
+            foreach (FileInfo NextFile in files)
             {
                 //流式读取文件类型
                 FileStream stream = new FileStream(NextFile.FullName, FileMode.Open, FileAccess.Read);

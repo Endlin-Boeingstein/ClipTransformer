@@ -46,6 +46,7 @@
     <Compile Include="ClipReader.cs" />
     <Compile Include="ClipTransformer.cs" />
     <Compile Include="DOMDocumentReader.cs" />
+    <Compile Include="FileNameSort.cs" />
     <Compile Include="JudgeJoF.cs" />
     <Compile Include="LibraryReader.cs" />
     <Compile Include="Program.cs" />
